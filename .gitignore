@@ -1,0 +1,14 @@
+# Build artifacts — don't commit compiled binaries; use GitHub
+# Releases to distribute the .exe instead of checking it into the repo.
+*.exe
+*.exe~
+
+# Go tooling
+go.work
+go.work.sum
+
+# IDE / OS noise
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
