@@ -13,10 +13,17 @@ This app watches for that specific drift via Sonar's own local REST API
 (the same one GG's UI uses) and re-applies the fix automatically —
 functionally identical to clicking "Switch it" in GG, just automatic.
 
+## Download
+
+**[Download the latest release](https://github.com/downing-labs/ss_connection_assistant/releases/tag/v1.0.0)**
+
+No installer, no build step — download the `.exe` and run it.
+Requires Windows with SteelSeries GG + Sonar installed and running.
+
 ## Features
 
 - **Tray icon** — green (all correct), amber (Sonar unreachable or audio
-  misrouted), purple (Work Mode — monitoring paused)
+  misrouted), blue (Work Mode — monitoring paused)
 - **Game Mode / Work Mode** — toggle via tray menu. Work Mode pauses all
   monitoring and fixing (and sends one final mic-unmute so you don't
   carry a mute into a work call)
@@ -34,7 +41,7 @@ No HID, no Windows Core Audio COM calls — just plain HTTP against
 Sonar's local REST API (port discovered dynamically each run, since it
 changes on every Sonar restart). See `internal/sonarapi` for the client.
 
-## Building
+## Building (from source)
 
 Requires Go 1.26+. No C compiler / cgo needed — everything here is
 pure Go plus Windows syscalls.
